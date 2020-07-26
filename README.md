@@ -9,6 +9,7 @@ The code formats in ESLint
 ## Build with
   * React
   * Express
+  * PostgreSQL
   
 # Installation
   * Clone my repo <br/>
