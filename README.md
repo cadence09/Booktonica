@@ -11,15 +11,15 @@ The code formats in ESLint
   * Express
   
 # Installation
-  * Clone my repo 
-     ** git clone "my repo"
-  * Create database
-     ** createdb booktonica
-     ** psql booktonica < booktonica.sql
-  * Run the app
-     ** cd express-api
-     ** npm install
-     ** npm start
-     ** cd ../react-app
-     ** npm install
-     ** npm start
+  * Clone my repo <br/>
+     - git clone "my repo"
+  * Create database <br/>
+     - createdb booktonica
+     - psql booktonica < booktonica.sql
+  * Run the app <br/>
+     - cd express-api
+     - npm install
+     - npm start
+     - cd ../react-app
+     - npm install
+     - npm start
