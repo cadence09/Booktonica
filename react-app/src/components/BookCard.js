@@ -33,8 +33,6 @@ class BookCard extends Component {
                         src={cover_image_url}
                         alt="Book cover"
                     />
-        
-                    {console.log("what is this props.comment",this.props.comments)}
                     <CardBody>
                         <CardTitle>{title}</CardTitle>
                         <CardSubtitle>{author_name}</CardSubtitle>
@@ -44,8 +42,6 @@ class BookCard extends Component {
                         <CardText>
                             <i>{publication_date}</i> - {summary}
                         </CardText>
-           
-                        {/* <button>Comments</button> */}
                         <Comments/>
                         <CardText>Comments</CardText>
                         <ListComments  comments={this.props.comments}/>

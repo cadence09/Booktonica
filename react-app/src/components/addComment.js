@@ -1,4 +1,11 @@
 import React from "react";
+import {
+    Form,
+    FormGroup,
+    Input,
+    Button,
+    Card
+} from "reactstrap";
 
 class Comments extends React.Component{
     constructor(props){
@@ -38,20 +45,22 @@ class Comments extends React.Component{
    
         return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    
-                    <textarea value={this.state.addComment} placeholder={"place your comment here"} onChange={this.handleText} name="text" ref="text" maxLength={10}/><br/>
+                <Form onSubmit={this.handleSubmit}>
+                    <FormGroup>
+                        <Input type="textarea" value={this.state.addComment} placeholder={"place your comment here"} onChange={this.handleText} name="text" ref="text" maxLength={100}/><br/>
                        
-                    <input type="number" value={this.state.userId} onChange={this.handleUserName} placeholder={"user id"}name="id" ref="id"/>
-                    <input type="number" value={this.state.bookId} onChange={this.handleBookId} placeholder={"book id"} name="bId" ref="bId"/>
+                        <Input type="number" value={this.state.userId} onChange={this.handleUserName} placeholder={"user id"}name="id" ref="id"/>
+                        <Input type="number" value={this.state.bookId} onChange={this.handleBookId} placeholder={"book id"} name="bId" ref="bId"/>
                   
-                    <div className="wordCount">
+                        <div className="wordCount">
                         character: {this.state.addComment.length}
-                        {this.state.addComment.length>9? " is over the limit":null}
-                    </div>
-                    {/* <button>Add Comments</button> */}
-                    <button type="submit">Add Comment</button>
-                </form>        
+                            {this.state.addComment.length>100? " is over the limit":null}
+                        </div>
+                        <Card>
+                            <Button size="sm" type="submit">Add Comment</Button>
+                        </Card>
+                    </FormGroup>
+                </Form>        
             </div>
         );
     }

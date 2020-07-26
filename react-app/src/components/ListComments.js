@@ -6,8 +6,9 @@ class ListComments extends Component{
             <div>
                 {this.props.comments.map((comment, index) => (
                     <div className="text-muted" key={comment.id}>
-                        {index+1}.{comment.user_name}:<br/>{comment.comment} 
+                        <b>{comment.user_name}:</b>{comment.comment} 
                     </div>
+                  
                 ))}
             </div>
         );
